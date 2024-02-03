@@ -11,19 +11,22 @@ c2, t2 = arr2[0], int(arr2[1])
 c3, t3 = arr3[0], int(arr3[1])
 
 if c1 == 'Y':
-    if c2 == 'Y' or c3 == 'Y':
-        if t1 >= 37:
-            if t2 >= 37 or t3 >= 37:
-                print("E")
-            else:
-                print("N")
-        elif t2 >= 37 and t3 >= 37:
+    if c2 == 'Y' and t2 >= 37: #2A
+        if t1 >= 37: #1A
+            print("E")
+        elif t3 >= 37 and c3 == 'Y': #3A
             print("E")
         else:
             print("N")
+    elif t3 >= 37 and c3 == 'Y': #3A
+        if t1 >= 37: #1A
+            print("E")
     else:
         print("N")
 elif c2 == 'Y' and c3 == 'Y':
-    print("E")
+    if t2 >= 37 and t3 >= 37:
+        print("E")
+    else:
+        print("N")
 else:
-    print('N')
+    print("N")
