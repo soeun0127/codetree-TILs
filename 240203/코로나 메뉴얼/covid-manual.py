@@ -21,6 +21,8 @@ if c1 == 'Y':
     elif t3 >= 37 and c3 == 'Y': #3A
         if t1 >= 37: #1A
             print("E")
+        else:
+            print("N")
     else:
         print("N")
 elif c2 == 'Y' and c3 == 'Y':
