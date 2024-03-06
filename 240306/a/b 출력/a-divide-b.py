@@ -1,12 +1,15 @@
-a, b = tuple(map(float, input().split()))
+a, b = tuple(map(int, input().split())) #a, b를 정수로 받음
 
-i = 0
-c = 0
-c = a / b
-print(c, end = "")
-while i < 19:
-    a = int(a)
-    b = int(b)
-    d = a // b
-    print(d, end = "")
-    i += 1
+print(f"{a//b}.", end="") #a가 b보다 크면 정수값이 나올 것, a가 b보다 작으면 0이 나올 것
+#정수 부분 뒤 소수점을 붙여줌
+a %= b #a를 b로 나눈 나머지를 a에 넣음
+
+for _ in range(20):#20번 반복
+
+    a *= 10 #a를 실수에서 정수로 바꿈
+    print(a//b, end="") #a를 b로 나눈 몫을 출력
+
+    a %= b #a를 다시 b로 나눈 나머지로 함
+
+#정수값을 출력하고 소수점을 출력하고 a를 나머지값으로 바꾼 뒤 for문을 통해 a를 정수로 
+#바꾸고 b로 나눈 몫을 출력하고 a를 다시 b로 나눈 나머지로 함
