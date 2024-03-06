@@ -10,6 +10,8 @@ while i <= n:
         else:
             print(i, end = " ")
         i += 1
+    elif i % 10 == 0 and i % 3 != 0:
+        print(i)
     else:
         if i % 3 == 0:
             print(0, end = " ")
