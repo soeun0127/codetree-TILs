@@ -4,7 +4,7 @@ cntToilet = 0
 
 date = int(input())
 
-for i in range(date):
+for i in range(date+1):
     if i % 12 == 0 and i != 0:
         cntToilet += 1
     elif i % 3 == 0 and i != 0:
