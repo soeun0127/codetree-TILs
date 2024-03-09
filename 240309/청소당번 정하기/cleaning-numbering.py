@@ -4,12 +4,12 @@ cntToilet = 0
 
 date = int(input())
 
-for i in range(1,date):
-    if i % 12 == 0:
+for i in range(date):
+    if i % 12 == 0 and i != 0:
         cntToilet += 1
-    elif i % 3 == 0:
+    elif i % 3 == 0 and i != 0:
         cntHall += 1
-    elif i % 2 == 0:
+    elif i % 2 == 0 and i != 0:
         cntClass += 1
 
 print(cntClass, cntHall, cntToilet)
