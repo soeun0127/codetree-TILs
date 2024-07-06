@@ -7,17 +7,16 @@ int main() {
     int arr[100][100];
     int count = 0;
     for(int i=0; i<m; i++){
-        if(i != 0){
-            count = count + n - 1;
-        }
-        for(int j=0; j<n; j++){
-            if(i % 2 == 0){
+        if(i % 2 == 0){
+            for(int j=0; j<n; j++){
                 arr[j][i] = count;
                 count++;
             }
-            else{
+        }
+        else{
+            for(int j=n-1; j >=0; j--){
                 arr[j][i] = count;
-                count--;
+                count++;
             }
         }
     }
