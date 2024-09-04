@@ -3,7 +3,7 @@
 int main() {
     int n = 0, m = 0;
     scanf("%d %d", &n, &m);
-    int arr[81][2] = {0,};
+    int arr[81][81] = {0,};
 
     for(int i=0; i<m; i++){
         int r = 0, c = 0;
