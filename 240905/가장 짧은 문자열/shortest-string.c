@@ -14,27 +14,13 @@ int main() {
     int len2 = strlen(str2);
     int len3 = strlen(str3);
 
-    if(len1 > len2){
-        if(len2 > len3){
-            printf("%d", len1 - len3);
-        }
-        else if(len1 > len3){
-            printf("%d", len1 - len2);
-        }
-        else{
-            printf("%d", len3 - len2);
-        }
-    }
-    else{
-        if(len3 > len2){
-            printf("%d", len3 - len1);
-        }
-        else if(len1 > len3){
-            printf("%d", len2 - len3);
-        }
-        else{
-            printf("%d", len2 - len1);
-        }
-    }
+    int mx = len1;
+    if(mx < len2) mx = len2;
+    if(mx < len3) mx = len3;
+    int mn = len1;
+    if(mn > len2) mn = len2;
+    if(mn > len3) mn = len3;
+
+    printf("%d", mx - mn);
     return 0;
 }
